@@ -24,10 +24,11 @@ function comprimeJS(){
 }
 exports.uglify = comprimeJS;
 
-const imageMin = require('gulp-imagemin')
+
+const imagemin = require('gulp-imagemin');
 function comprimeImagens(){
-    return gulp.src('src/images/*')
-        .pipe(imageMin)
-        .pipe(gulp.dest('dist/images'))
+    return gulp.src('./src/images/*')
+        .pipe(imagemin())
+        .pipe(gulp.dest('./dist/images'));
 }
-exports.imageMin = imageMin
+exports.imageMin = comprimeImagens;
